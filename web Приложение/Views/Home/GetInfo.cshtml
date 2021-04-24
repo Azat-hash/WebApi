@@ -1,0 +1,31 @@
+﻿@using web_Приложение.Models
+@model Animal
+@{
+    ViewBag.Title = "GetInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetInfo</h2>
+<div>
+    <table>
+        <tr>
+            <td>Животные</td>
+            <td>@Model.Name</td>
+        </tr>
+        <tr><td>Тип животного</td></tr>
+        @foreach (WildAnimal wild in Model.Wilds)
+        {
+            <tr>
+                <td>@wild.Type</td>
+            </tr>
+        }
+
+        @foreach (PetsAnimal pets in Model.Pets)
+        {
+            <tr>
+                <td>@pets.Type</td>
+            </tr>
+        }
+    </table>
+</div>
+

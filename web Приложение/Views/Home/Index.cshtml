@@ -1,0 +1,19 @@
+﻿@using web_Приложение.Models
+@model List<Animal>
+
+<div>
+    <table>
+        <tr>
+            <th>Животные</th>
+
+        </tr>
+        @foreach (Animal animal in Model)
+        {
+            <tr>
+                <td>@animal.Name</td>
+
+                <td><a href="/Home/GetInfo/@animal.Id">Информация</a></td>
+            </tr>
+        }
+    </table>
+</div>
